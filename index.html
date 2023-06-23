@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>بطاقة الصداقة</title>
+  <style>
+    body {
+      background-color: #92c5de;
+      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 400px;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: enterAnimation 1s forwards;
+    }
+
+    .card-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card-header h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card-content {
+      color: #555;
+      line-height: 1.5;
+      text-align: right;
+    }
+
+    .card-content p {
+      margin-bottom: 10px;
+    }
+
+    .card-content img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #ff6961;
+    }
+
+    .sun {
+      width: 80px;
+      height: 80px;
+      background-color: #f8e352;
+      border-radius: 50%;
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      opacity: 0;
+      transform: scale(0);
+      animation: sunAnimation 1s forwards;
+    }
+
+    .sea {
+      width: 100%;
+      height: 120px;
+      background-color: #3da9d6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      animation: seaAnimation 1s forwards;
+    }
+
+    @keyframes enterAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes sunAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes seaAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      const card = document.querySelector('.card');
+      const sun = document.querySelector('.sun');
+      const sea = document.querySelector('.sea');
+
+      card.style.animationDelay = '0s';
+      sun.style.animationDelay = '0.5s';
+      sea.style.animationDelay = '0.5s';
+    };
+  </script>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h2>إلى صديقى العزيز</h2>
+    </div>
+    <div class="card-content">
+      <img src="https://iili.io/HPhcd57.jpg" alt="صورة الملف الشخصي">
+      <p>عزيزي <span class="highlight">لطفى</span>,</p>
+      <p>في هذه المناسبة الخاصة، نود أن نحتفل بصداقتنا وأن نخبرك بمدى أهميتك بالنسبة لنا.</p>
+      <p>شكرًا لك على أنك دائمًا موجود ومدعم لنا، وعلى صنع كل لحظة لا تُنسى.</p>
+      <p>نتمنى لك المزيد من المغامرات والذكريات الرائعة معًا!</p>
+      <p>مع تحياتى</p>
+      <p>صديقك</p>
+      <p class="highlight">أحمد عمرو</p>
+      
+    </div>
+  </div>
+  <div class="sun"></div>
+  <div class="sea"></div>
+</body>
+</html>
